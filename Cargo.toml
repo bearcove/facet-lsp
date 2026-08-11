@@ -1,0 +1,31 @@
+[package]
+name = "facet-lsp"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.92"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/bearcove/facet-lsp"
+homepage = "https://github.com/bearcove/facet-lsp"
+documentation = "https://docs.rs/facet-lsp"
+description = "Small Facet-derived LSP 3.17 type subset and JSON-RPC framing."
+keywords = ["lsp", "json-rpc", "facet", "text-editors"]
+categories = ["development-tools", "text-editors"]
+readme = "README.md"
+include = [
+    "Cargo.toml",
+    "README.md",
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "src/**",
+    "tests/**",
+]
+
+[dependencies]
+facet = { version = "=0.50.0-rc.5", git = "https://github.com/facet-rs/facet", rev = "5705fa6c51289bea49f5729c52dc5e23cedce4f8" }
+facet-json = { version = "=0.50.0-rc.5", git = "https://github.com/facet-rs/facet", rev = "5705fa6c51289bea49f5729c52dc5e23cedce4f8" }
+
+[dev-dependencies]
+facet-testhelpers = { version = "=0.50.0-rc.5", git = "https://github.com/facet-rs/facet", rev = "5705fa6c51289bea49f5729c52dc5e23cedce4f8" }
+
+[lints.rust]
+unsafe_code = "forbid"
